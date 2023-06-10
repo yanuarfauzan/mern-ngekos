@@ -1,0 +1,56 @@
+GET http://localhost:5000/buku
+
+###
+GET http://localhost:5000/buku/64739ead69075916d48fe450
+
+###
+POST http://localhost:5000/buku
+Content-Type: application/json
+
+{
+    "judul": "Lord Of the Rings",
+    "penulis": "koromod",
+    "penerbit": "anisa"
+}
+
+###
+PATCH http://localhost:5000/buku/64739ead69075916d48fe450
+Content-Type: application/json
+
+{
+    "judul": "Game of Thrones",
+    "penulis": "koromod",
+    "penerbit": "anisa"
+}
+
+###
+DELETE http://localhost:5000/buku/64739ead69075916d48fe450
+
+
+###
+GET http://localhost:5000/kategori
+
+###
+GET http://localhost:5000/kategori/64741b9f1e88ccc897a75bc4
+
+
+###
+POST http://localhost:5000/kategori
+Content-Type: application/json
+
+{
+    "nama_kategori": "Drama Comedy"
+}
+
+###
+PATCH http://localhost:5000/kategori/64741b9f1e88ccc897a75bc4
+Content-Type: application/json
+
+{
+    "nama_kategori": "Drama Gelay"
+}
+
+###
+DELETE http://localhost:5000/kategori/64741b9f1e88ccc897a75bc4
+
+
