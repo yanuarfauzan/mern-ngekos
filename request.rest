@@ -1,30 +1,30 @@
-GET http://localhost:5000/buku
+GET http://localhost:5000/pemilik
 
 ###
-GET http://localhost:5000/buku/64739ead69075916d48fe450
+GET http://localhost:5000/pemilik/6484e4fecc424b170c0dcd0e
 
 ###
-POST http://localhost:5000/buku
+POST http://localhost:5000/pemilik
 Content-Type: application/json
 
 {
-    "judul": "Lord Of the Rings",
-    "penulis": "koromod",
-    "penerbit": "anisa"
+    "nama": "Yanuar Fauzan",
+    "email": "yanuarisnain017@gmail.com",
+    "alamat": "bumi"
 }
 
 ###
-PATCH http://localhost:5000/buku/64739ead69075916d48fe450
+PATCH http://localhost:5000/pemilik/6484e4fecc424b170c0dcd0e
 Content-Type: application/json
 
 {
-    "judul": "Game of Thrones",
-    "penulis": "koromod",
-    "penerbit": "anisa"
+    "nama": "Yanuar Fauzan",
+    "email": "yanuarisnain017@gmail.com",
+    "alamat": "bumi kita berdua"
 }
 
 ###
-DELETE http://localhost:5000/buku/64739ead69075916d48fe450
+DELETE http://localhost:5000/pemilik/6484e4fecc424b170c0dcd0e
 
 
 ###

@@ -2,6 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 
+// router
+import pemilikRoute from "./routes/pemilikRoute.js";
+
 
 const app = express();
 
@@ -20,6 +23,9 @@ db.once('open', () => console.log('Database Connected...'));
 // middleware
 app.use(cors());
 app.use(express.json());
+
+// route
+app.use(pemilikRoute);
 
 const port = 5000;
 // listen port
