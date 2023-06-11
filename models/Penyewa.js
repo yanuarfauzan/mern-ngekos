@@ -23,6 +23,6 @@ const PenyewaSchema = mongoose.Schema({
     }
 });
 
-const Penyewa = mongoose.model('Penyewa', PenyewaShema);
+const Penyewa = mongoose.model('Penyewa', PenyewaSchema);
 
 export default Penyewa;

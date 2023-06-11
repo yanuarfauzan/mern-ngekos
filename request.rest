@@ -28,29 +28,34 @@ DELETE http://localhost:5000/pemilik/6484e4fecc424b170c0dcd0e
 
 
 ###
-GET http://localhost:5000/kategori
+GET http://localhost:5000/penyewa
 
 ###
-GET http://localhost:5000/kategori/64741b9f1e88ccc897a75bc4
-
+GET http://localhost:5000/penyewa/64855daaab5872a9c1403914
 
 ###
-POST http://localhost:5000/kategori
+POST http://localhost:5000/penyewa
 Content-Type: application/json
 
 {
-    "nama_kategori": "Drama Comedy"
+    "nik": "123456789",
+    "nama": "yanuar fauzan isnain",
+    "email": "yanuar@gmail.com",
+    "alamat": "ciamis",
+    "no_telp": "085797227164"
 }
 
 ###
-PATCH http://localhost:5000/kategori/64741b9f1e88ccc897a75bc4
+PATCH http://localhost:5000/penyewa/64855daaab5872a9c1403914
 Content-Type: application/json
 
 {
-    "nama_kategori": "Drama Gelay"
+    "nik": "123456789",
+    "nama": "Anisa Galih Tanzani",
+    "email": "anisa@gmail.com",
+    "alamat": "ciamis",
+    "no_telp": "085797227164"
 }
 
 ###
-DELETE http://localhost:5000/kategori/64741b9f1e88ccc897a75bc4
-
-
+DELETE http://localhost:5000/penyewa/64855e21ab5872a9c140391b
