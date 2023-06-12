@@ -7,6 +7,7 @@ import pemilikRoute from "./routes/pemilikRoute.js";
 import penyewaRoute from "./routes/penyewaRoute.js";
 import kosRoute from "./routes/kosRoute.js";
 import kamarRoute from "./routes/kamarRoute.js";
+import kontrakRoute from "./routes/kontrakRoute.js";
 
 
 const app = express();
@@ -32,6 +33,7 @@ app.use(pemilikRoute);
 app.use(penyewaRoute);
 app.use(kosRoute);
 app.use(kamarRoute);
+app.use(kontrakRoute);
 
 const port = 5000;
 // listen port

@@ -6,15 +6,15 @@ const KontrakSchema = mongoose.Schema({
         required: true
     },
     tgl_mulai: {
-        type: Date,
+        type: String,
         required: true
     },
     tgl_selesai: {
-        type: Date,
+        type: String,
         required: true
     },
     tgl_bayar: {
-        type: Date,
+        type: String,
         required: true
     },
     status: {
@@ -26,14 +26,12 @@ const KontrakSchema = mongoose.Schema({
         required: true
     },
     kamar_id: {
-        type: Array,
-        default: [],
-        required: true
+        type: mongoose.Schema.Types.Array,
+        ref: 'Kamar',
     },
     penyewa_id: {
-        type: Array,
-        default: [],
-        required: true
+        type: mongoose.Schema.Types.Array,
+        ref: 'Penyewa'
     },
 });
 

@@ -130,3 +130,43 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/kamar/64872afaa8fa4ffaf83b4ad5
+
+
+# kontrak
+
+###
+GET http://localhost:5000/kontrak
+
+###
+GET http://localhost:5000/kontrak/64873ac0c70c25d933a7d616
+
+###
+POST http://localhost:5000/kontrak
+Content-Type: application/json
+
+{
+    "kode": "kode1",
+    "tgl_mulai": "17/01/02",
+    "tgl_selesai": "12/01/02",
+    "tgl_bayar": "08/08/08",
+    "status": "lunas",
+    "metode_bayar": "qris",
+    "kamar_id": "6487380a604c04b4d817212d",
+    "penyewa_id": "64855e69ab5872a9c1403922"
+}
+
+
+###
+PATCH http://localhost:5000/kontrak/
+Content-Type: application/json
+
+{
+    "nama_kamar": "Anggrek",
+    "fasilitas": "Kasur",
+    "harga": "200.000",
+    "status": "kosong"
+}
+
+###
+DELETE http://localhost:5000/kontrak/64873ac0c70c25d933a7d616
+
