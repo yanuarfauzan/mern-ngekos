@@ -77,7 +77,8 @@ Content-Type: application/json
     "nama": "Jhon Smith",
     "alamat": "New York",
     "no_telp": "085797227",
-    "pemilik_id": "648627597803ae4ecc24e3b2"
+    "pemilik_id": "648627597803ae4ecc24e3b2",
+    "kamar_id": "64872b53a8fa4ffaf83b4ade"
 }
 
 
@@ -89,8 +90,43 @@ Content-Type: application/json
     "nama": "oogway",
     "alamat": "srilanka",
     "no_telp": "12345",
-    "pemilik_id": "648627597803ae4ecc24e3b2"
+    "pemilik_id": "648627597803ae4ecc24e3b2",
+    "kamar_id": "64872b53a8fa4ffaf83b4ade"
 }
 
 ###
 DELETE http://localhost:5000/kos/648627bf7803ae4ecc24e3c0
+
+# kamar
+
+###
+GET http://localhost:5000/kamar
+
+###
+GET http://localhost:5000/kamar/64872afaa8fa4ffaf83b4ad5
+
+###
+POST http://localhost:5000/kamar
+Content-Type: application/json
+
+{
+    "nama_kamar": "Mawar",
+    "fasilitas": "AC",
+    "harga": "200.000",
+    "status": "penuh"
+}
+
+
+###
+PATCH http://localhost:5000/kamar/64872afaa8fa4ffaf83b4ad5
+Content-Type: application/json
+
+{
+    "nama_kamar": "Anggrek",
+    "fasilitas": "Kasur",
+    "harga": "200.000",
+    "status": "kosong"
+}
+
+###
+DELETE http://localhost:5000/kamar/64872afaa8fa4ffaf83b4ad5
