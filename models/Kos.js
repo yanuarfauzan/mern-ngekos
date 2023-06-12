@@ -14,9 +14,8 @@ const KosSchema = mongoose.Schema({
         required: true
     },
     pemilik_id: {
-        type: Array,
-        default: [],
-        required: true
+        type: mongoose.Schema.Types.Array,
+        ref: 'Pemilik',
     },
 });
 

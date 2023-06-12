@@ -5,6 +5,7 @@ import cors from "cors";
 // router
 import pemilikRoute from "./routes/pemilikRoute.js";
 import penyewaRoute from "./routes/penyewaRoute.js";
+import kosRoute from "./routes/kosRoute.js";
 
 
 const app = express();
@@ -28,6 +29,7 @@ app.use(express.json());
 // route
 app.use(pemilikRoute);
 app.use(penyewaRoute);
+app.use(kosRoute);
 
 const port = 5000;
 // listen port

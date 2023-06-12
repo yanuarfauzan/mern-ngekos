@@ -8,9 +8,9 @@ POST http://localhost:5000/pemilik
 Content-Type: application/json
 
 {
-    "nama": "Yanuar Fauzan",
-    "email": "yanuarisnain017@gmail.com",
-    "alamat": "bumi"
+    "nama": "Anisa Galih Tanzani",
+    "email": "anisaGaloh@gmail.com",
+    "alamat": "surga"
 }
 
 ###
@@ -59,3 +59,38 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/penyewa/64855e21ab5872a9c140391b
+
+
+# KOS
+
+###
+GET http://localhost:5000/kos
+
+###
+GET http://localhost:5000/kos/648627bf7803ae4ecc24e3c0
+
+###
+POST http://localhost:5000/kos
+Content-Type: application/json
+
+{
+    "nama": "Jhon Smith",
+    "alamat": "New York",
+    "no_telp": "085797227",
+    "pemilik_id": "648627597803ae4ecc24e3b2"
+}
+
+
+###
+PATCH http://localhost:5000/kos/6486268537aea57457e5608d
+Content-Type: application/json
+
+{
+    "nama": "oogway",
+    "alamat": "srilanka",
+    "no_telp": "12345",
+    "pemilik_id": "648627597803ae4ecc24e3b2"
+}
+
+###
+DELETE http://localhost:5000/kos/648627bf7803ae4ecc24e3c0
