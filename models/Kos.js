@@ -17,6 +17,10 @@ const KosSchema = mongoose.Schema({
         type: mongoose.Schema.Types.Array,
         ref: 'Pemilik',
     },
+    kamar_id: {
+        type: mongoose.Schema.Types.Array,
+        ref: 'Kamar',
+    }
 });
 
 

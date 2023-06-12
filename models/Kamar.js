@@ -16,12 +16,7 @@ const KamarSchema = mongoose.Schema({
     status: {
         type: String,
         required: true
-    },
-    kod_id: {
-        type: Array,
-        default: [],
-        required: true
-    },
+    }
 });
 
 const Kamar = mongoose.model('Kamar', KamarSchema);
