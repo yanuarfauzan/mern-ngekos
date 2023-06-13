@@ -8,6 +8,7 @@ import penyewaRoute from "./routes/penyewaRoute.js";
 import kosRoute from "./routes/kosRoute.js";
 import kamarRoute from "./routes/kamarRoute.js";
 import kontrakRoute from "./routes/kontrakRoute.js";
+import authRoute from "./routes/authRoute.js";
 
 
 const app = express();
@@ -34,6 +35,7 @@ app.use(penyewaRoute);
 app.use(kosRoute);
 app.use(kamarRoute);
 app.use(kontrakRoute);
+app.use(authRoute);
 
 const port = 5000;
 // listen port

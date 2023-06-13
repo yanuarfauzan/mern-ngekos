@@ -170,3 +170,24 @@ Content-Type: application/json
 ###
 DELETE http://localhost:5000/kontrak/64873ac0c70c25d933a7d616
 
+
+# AUTH
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "nama": "Jujun",
+    "email": "jujun@gmail.com",
+    "password": "rahasiaBanget"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "jujun@gmail.com",
+    "password": "rahasiaBanget"
+}
