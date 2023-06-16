@@ -9,12 +9,12 @@ Content-Type: application/json
 
 {
     "nama": "Anisa Galih Tanzani",
-    "email": "anisaGaloh@gmail.com",
+    "email": "anisaGalih@gmail.com",
     "alamat": "surga"
 }
 
 ###
-PATCH http://localhost:5000/pemilik/6484e4fecc424b170c0dcd0e
+PATCH http://localhost:5000/pemilik/648627597803ae4ecc24e3b2
 Content-Type: application/json
 
 {
@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/pemilik/6484e4fecc424b170c0dcd0e
+DELETE http://localhost:5000/pemilik/648627597803ae4ecc24e3b2
 
 
 ###
