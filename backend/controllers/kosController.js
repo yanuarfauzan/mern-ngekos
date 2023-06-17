@@ -29,7 +29,7 @@ export const saveKos = async (req, res) => {
             return res.status(404).json({ error: 'Pemilik not found' });
         }
         if (!kamar) {
-            return res.status(404).json({ error: "Kamar not found"});
+            return res.status(404).json({ error: "Kamar not found" });
         }
 
         const kos = new Kos({
@@ -56,8 +56,8 @@ export const updateKos = async (req, res) => {
         if (!pemilik) {
             return res.status(404).json({ error: 'Pemilik not found' });
         }
-        if(!kamar) {
-            res.status(404).json({ error: "Kamar not found"})
+        if (!kamar) {
+            res.status(404).json({ error: "Kamar not found" })
         }
 
         const updatedKos = await Kos.findByIdAndUpdate(id, {
@@ -86,23 +86,8 @@ export const deleteKos = async (req, res) => {
         if (!kos) {
             return res.status(404).json({ error: 'Kos not found' });
         }
-
-        const pemilik_id = kos.pemilik_id;
-        const kamar_id = kos.kamar_id;
-
-        await kos.deleteOne({ _id: id });
-
-        const pemilik = await Pemilik.findById(pemilik_id);
-        const kamar = await Kamar.findById(kamar_id);
-        if (pemilik) {
-            kos.pemilik.pull(id);
-            await pemilik.save();
-        };
-
-        if(kamar) {
-            kos.kamar.pull(id);
-            await kamar.save();
-        }
+        const deletedKos = await kos.deleteOne({ _id: id });
+        res.json(deletedKos);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }

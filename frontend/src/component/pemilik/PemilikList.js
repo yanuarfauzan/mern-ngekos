@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 
 const PemilikList = () => {
   const [pemilik, setPemilik] = useState([]);
 
+  const navigate = useNavigate();
 
   useEffect(() => {
     getPemilik();
@@ -19,7 +20,7 @@ const PemilikList = () => {
   const deletePemilik = async (id) => {
     try {
       await axios.delete(`http://localhost:5000/pemilik/${id}`);
-      getPemilik();
+      navigate("/kos")
     } catch (err) {
       console.log(err.response.data);
     }
@@ -46,15 +47,15 @@ const PemilikList = () => {
                 </thead>
                 <tbody>
                   {pemilik.map((p, index) => (
-                    <tr key="p._id">
-                      <th>{index + 1}</th>
-                      <th>{p.nama}</th>
-                      <th>{p.email}</th>
-                      <th>{p.alamat}</th>
-                      <th>
+                    <tr key={p._id}>
+                      <td>{index + 1}</td>
+                      <td>{p.nama}</td>
+                      <td>{p.email}</td>
+                      <td>{p.alamat}</td>
+                      <td>
                         <Link to={`/editPemilik/${p._id}`} className="btn btn-warning text-light">edit</Link>
                         <button className="btn btn-danger text-light ms-2" onClick={() => deletePemilik(p._id)}>hapus</button>
-                      </th>
+                      </td>
                     </tr>
                   ))}
                 </tbody>

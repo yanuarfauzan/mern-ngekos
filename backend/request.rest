@@ -77,8 +77,8 @@ Content-Type: application/json
     "nama": "Jhon Smith",
     "alamat": "New York",
     "no_telp": "085797227",
-    "pemilik_id": "648627597803ae4ecc24e3b2",
-    "kamar_id": "64872b53a8fa4ffaf83b4ade"
+    "pemilik_id": "648c05cb95a998d4f42498fa",
+    "kamar_id": "648c7e0195a998d4f4249ab3"
 }
 
 
@@ -95,7 +95,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/kos/648627bf7803ae4ecc24e3c0
+DELETE http://localhost:5000/kos/648c865fcd3906b381a94ef0
 
 # kamar
 
@@ -110,7 +110,7 @@ POST http://localhost:5000/kamar
 Content-Type: application/json
 
 {
-    "nama_kamar": "Mawar",
+    "nama_kamar": "Anggrek",
     "fasilitas": "AC",
     "harga": "200.000",
     "status": "penuh"
