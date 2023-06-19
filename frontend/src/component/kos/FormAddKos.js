@@ -28,8 +28,8 @@ const FormAddKos = () => {
         nama,
         alamat,
         no_telp: noTelp,
-        pemilik_id: pemilik_id,
-        kamar_id: kamar_id
+        pemilik_id,
+        kamar_id
       });
       navigate("/kos")
     } catch (error) {
@@ -48,18 +48,6 @@ const FormAddKos = () => {
     const response = await axios.get("http://localhost:5000/pemilik");
     setPemilik(response.data);
     console.log(response.data);
-  }
-
-  const getValuePemilik = () => {
-    const selectedElement = document.getElementById('pemilik');
-    const selectedValue = selectedElement.value;
-    setPemilik_id(selectedValue);
-  }
-
-  const getValueKamar = () => {
-    const selectedElement = document.getElementById('kamar');
-    const selectedValue = selectedElement.value;
-    setKamar_id(selectedValue);
   }
   return (
     <div>
@@ -83,7 +71,7 @@ const FormAddKos = () => {
                 </div>
                 <div className="mb-3">
                   <label for="pemilik" class="form-label">Pemilik</label>
-                  <select className="form-select" id="pemilik" onChange={() => getValuePemilik()} >
+                  <select className="form-select" id="pemilik" onChange={(e) => setPemilik_id(e.target.value)} >
                     <option>pilih pemilik</option>
                     {pemilik.map((p, index) => (
                       <option key={p._id} value={p._id}>{p.nama}</option>
@@ -92,7 +80,7 @@ const FormAddKos = () => {
                 </div>
                 <div className="mb-3">
                   <label for="kamar" class="form-label">Kamar</label>
-                  <select className="form-select" id="kamar" onChange={() => getValueKamar()} >
+                  <select className="form-select" id="kamar" onChange={(e) => setKamar_id(e.target.value)} >
                     <option>pilih kamar</option>
                     {kamar.map((k, index) => (
                       <option key={k._id} value={k._id}>{k.nama_kamar}</option>

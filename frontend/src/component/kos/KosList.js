@@ -8,12 +8,12 @@ const KosList = () => {
 
     useEffect(() => {
         getKos();
-        console.log(kos);
     }, []);
 
     const getKos = async () => {
         const response = await axios.get("http://localhost:5000/kos");
         setKos(response.data);
+        console.log(response.data);
     }
 
     const deleteKos = async (id) => {
@@ -24,6 +24,7 @@ const KosList = () => {
             console.log(error.response.data);
         }
     }
+
 
     return (
         <div>
@@ -39,7 +40,6 @@ const KosList = () => {
                                     <th>Alamat</th>
                                     <th>No_telp</th>
                                     <th>Pemilik</th>
-                                    <th>Kamar</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -54,11 +54,9 @@ const KosList = () => {
                                         {k.pemilik_id.map((pmlk, index) => (
                                             <td>{pmlk.nama}</td>
                                         ))}
-                                        {k.kamar_id.map((kmr, index) => (
-                                            <td>{kmr.nama_kamar}</td>
-                                        ))}
                                         <th>
-                                            <Link to={`/editPemilik/${k._id}`} className="btn btn-warning text-light">edit</Link>
+                                            <Link className="btn btn-info me-2 text-light" to={`/kamar/${k._id}`}>detail</Link>
+                                            <Link to={`/editKos/${k._id}`} className="btn btn-warning text-light">edit</Link>
                                             <button className="btn btn-danger text-light ms-2" onClick={() => deleteKos(k._id)}>hapus</button>
                                         </th>
                                     </tr>

@@ -7,6 +7,10 @@ import KosList from "./component/kos/KosList.js";
 import FormAddKos from "./component/kos/FormAddKos.js";
 import Navbar from "./component/layouts/Navbar.js";
 import FormEditKos from "./component/kos/FormEditKos.js";
+import KamarList from "./component/kamar/KamarList.js";
+import FromAddKamar from "./component/kamar/FromAddKamar.js";
+import FormEditKamar from "./component/kamar/FormEditKamar.js";
+
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
           <Route path="/kos" element={<KosList />} />
           <Route path="/addKos" element={<FormAddKos />} />
           <Route path="/editKos/:id" element={<FormEditKos />} />
+          {/* KAMAR */}
+          <Route path="/kamar/:kosId" element={<KamarList />} />
+          <Route path="/addKamar/:kosId" element={<FromAddKamar />} />
+          <Route path="/editKamar/:kosId/:id" element={<FormEditKamar />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -83,15 +83,15 @@ Content-Type: application/json
 
 
 ###
-PATCH http://localhost:5000/kos/6486268537aea57457e5608d
+PATCH http://localhost:5000/kos/648d2f0ca8ab90b392d3b1c9
 Content-Type: application/json
 
 {
     "nama": "oogway",
     "alamat": "srilanka",
     "no_telp": "12345",
-    "pemilik_id": "648627597803ae4ecc24e3b2",
-    "kamar_id": "64872b53a8fa4ffaf83b4ade"
+    "pemilik_id": "648c108295a998d4f424995b",
+    "kamar_id": "6487380a604c04b4d817212d"
 }
 
 ###
@@ -106,11 +106,14 @@ GET http://localhost:5000/kamar
 GET http://localhost:5000/kamar/64872afaa8fa4ffaf83b4ad5
 
 ###
-POST http://localhost:5000/kamar
+GET http://localhost:5000/kamarByKos/648d2f0ca8ab90b392d3b1c9
+
+###
+POST http://localhost:5000/kamar/648d2f0ca8ab90b392d3b1c9
 Content-Type: application/json
 
 {
-    "nama_kamar": "Anggrek",
+    "nama_kamar": "Cubluk",
     "fasilitas": "AC",
     "harga": "200.000",
     "status": "penuh"
