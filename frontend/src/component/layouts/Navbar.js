@@ -7,6 +7,7 @@ const navbar = () => {
             <nav className="navbar bg-body-tertiary">
                 <div className="container justify-content-start">
                     <Link to={'/pemilik'} className="btn btn-sm btn-outline-success" type="button">Pemilik</Link>
+                    <Link to={'/penyewa'} className="btn btn-sm btn-outline-success ms-3" type="button">Penyewa</Link>
                     <Link to={'/kos'} className="btn btn-sm btn-outline-success ms-3" type="button">Kos</Link>
                 </div>
             </nav>

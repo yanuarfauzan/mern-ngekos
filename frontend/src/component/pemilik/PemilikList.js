@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 
+
 const PemilikList = () => {
   const [pemilik, setPemilik] = useState([]);
 
@@ -29,7 +30,6 @@ const PemilikList = () => {
 
   return (
     <div>
-
       <div className="container-fluid">
         <Link className="btn btn-success  ms-5 mt-5" to={'/addPemilik'}>Tambah Pemilik</Link>
         <div className="row mt-3 me-4 ms-4">

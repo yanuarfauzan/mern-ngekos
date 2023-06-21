@@ -31,7 +31,7 @@ DELETE http://localhost:5000/pemilik/648627597803ae4ecc24e3b2
 GET http://localhost:5000/penyewa
 
 ###
-GET http://localhost:5000/penyewa/64855daaab5872a9c1403914
+GET http://localhost:5000/penyewa/64855e69ab5872a9c1403922
 
 ###
 POST http://localhost:5000/penyewa

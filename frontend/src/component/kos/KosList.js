@@ -32,37 +32,39 @@ const KosList = () => {
                 <Link className="btn btn-success  ms-5 mt-5" to={'/addKos'}>Tambah Kos</Link>
                 <div className='row mt-3 me-4 ms-4'>
                     <div className='col'>
-                        <table className="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    <th>Alamat</th>
-                                    <th>No_telp</th>
-                                    <th>Pemilik</th>
-                                    <th>Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {kos.map((k, index) => (
-                                    <tr key={k._id}>
-                                        <td>{index + 1}</td>
-                                        <td>{k.nama}</td>
-                                        <td>{k.alamat}</td>
-                                        <td>{k.no_telp}</td>
-
-                                        {k.pemilik_id.map((pmlk, index) => (
-                                            <td>{pmlk.nama}</td>
-                                        ))}
-                                        <th>
-                                            <Link className="btn btn-info me-2 text-light" to={`/kamar/${k._id}`}>detail</Link>
-                                            <Link to={`/editKos/${k._id}`} className="btn btn-warning text-light">edit</Link>
-                                            <button className="btn btn-danger text-light ms-2" onClick={() => deleteKos(k._id)}>hapus</button>
-                                        </th>
+                        <div className='card'>
+                            <table className="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>Alamat</th>
+                                        <th>No_telp</th>
+                                        <th>Pemilik</th>
+                                        <th>Aksi</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    {kos.map((k, index) => (
+                                        <tr key={k._id}>
+                                            <td>{index + 1}</td>
+                                            <td>{k.nama}</td>
+                                            <td>{k.alamat}</td>
+                                            <td>{k.no_telp}</td>
+
+                                            {k.pemilik_id.map((pmlk, index) => (
+                                                <td>{pmlk.nama}</td>
+                                            ))}
+                                            <th>
+                                                <Link className="btn btn-info me-2 text-light" to={`/kamar/${k._id}`}>detail</Link>
+                                                <Link to={`/editKos/${k._id}`} className="btn btn-warning text-light">edit</Link>
+                                                <button className="btn btn-danger text-light ms-2" onClick={() => deleteKos(k._id)}>hapus</button>
+                                            </th>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

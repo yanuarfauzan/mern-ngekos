@@ -10,6 +10,9 @@ import FormEditKos from "./component/kos/FormEditKos.js";
 import KamarList from "./component/kamar/KamarList.js";
 import FromAddKamar from "./component/kamar/FromAddKamar.js";
 import FormEditKamar from "./component/kamar/FormEditKamar.js";
+import PenyewaList from "./component/penyewa/PenyewaList.js";
+import FormAddPenyewa from "./component/penyewa/FormAddPenyewa.js";
+import FormEditPenyewa from "./component/penyewa/FormEditPenyewa.js";
 
 
 function App() {
@@ -30,6 +33,11 @@ function App() {
           <Route path="/kamar/:kosId" element={<KamarList />} />
           <Route path="/addKamar/:kosId" element={<FromAddKamar />} />
           <Route path="/editKamar/:kosId/:id" element={<FormEditKamar />} />
+          {/* PENYEWA */}
+          <Route path="/penyewa" element={<PenyewaList />} />
+          <Route path="/addPenyewa" element={<FormAddPenyewa />} />
+          <Route path="/editPenyewa/:id" element={<FormEditPenyewa />} />
+
         </Routes>
       </div>
     </BrowserRouter>
