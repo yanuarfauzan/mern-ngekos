@@ -74,21 +74,21 @@ const FormEditKos = () => {
                             <h1>Form Edit Kos</h1>
                             <form onSubmit={updateKos}>
                                 <div>
-                                    <div class="mb-3">
-                                        <label for="nama" class="form-label">Nama</label>
-                                        <input type="text" class="form-control" id="nama" value={nama} onChange={(e) => setNama(e.target.value)} />
+                                    <div className="mb-3">
+                                        <label htmlFor="nama" className="form-label">Nama</label>
+                                        <input type="text" className="form-control" id="nama" value={nama} onChange={(e) => setNama(e.target.value)} />
                                     </div>
-                                    <div class="mb-3">
-                                        <label class="form-label" for="alamat">Alamat</label>
-                                        <input type="text" class="form-control" id="alamat" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
+                                    <div className="mb-3">
+                                        <label className="form-label" htmlFor="alamat">Alamat</label>
+                                        <input type="text" className="form-control" id="alamat" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="no_telp" class="form-label">No Telepon</label>
-                                        <input type="text" class="form-control" id="no_telp" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} />
+                                    <div className="mb-3">
+                                        <label htmlFor="no_telp" className="form-label">No Telepon</label>
+                                        <input type="text" className="form-control" id="no_telp" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className="mb-3">
-                                    <label for="pemilik" class="form-label">Pemilik</label>
+                                    <label htmlFor="pemilik" className="form-label">Pemilik</label>
                                     <select className="form-select" id="pemilik" value={pemilik_id._id} onChange={(e) => setPemilik_id(e.target.value)}>
                                         {pemilik.map((p, index) => (
                                             <option key={p._id} value={p._id} >{p.nama}</option>

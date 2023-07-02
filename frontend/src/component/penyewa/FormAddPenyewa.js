@@ -36,27 +36,27 @@ const FormAddPenyewa = () => {
                         <div>
                             <h1>Form Tambah Penyewa</h1>
                             <form onSubmit={savePenyewa} >
-                                <div class="mb-3">
-                                    <label for="id" class="form-label">Nik</label>
-                                    <input type="text" class="form-control" id="nik" value={nik} onChange={(e) => setNik(e.target.value)} />
+                                <div className="mb-3">
+                                    <label htmlFor="id" className="form-label">Nik</label>
+                                    <input type="text" className="form-control" id="nik" value={nik} onChange={(e) => setNik(e.target.value)} />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="nama" class="form-label">Nama</label>
-                                    <input type="text" class="form-control" id="nama" value={nama} onChange={(e) => setNama(e.target.value)} />
+                                <div className="mb-3">
+                                    <label htmlFor="nama" className="form-label">Nama</label>
+                                    <input type="text" className="form-control" id="nama" value={nama} onChange={(e) => setNama(e.target.value)} />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <div className="mb-3">
+                                    <label htmlFor="email" className="form-label">Email</label>
+                                    <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="alamat">Alamat</label>
-                                    <input type="text" class="form-control" id="alamat" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
+                                <div className="mb-3">
+                                    <label className="form-label" htmlFor="alamat">Alamat</label>
+                                    <input type="text" className="form-control" id="alamat" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="no_telp">No telpon</label>
-                                    <input type="text" class="form-control" id="no_telp" value={no_telp} onChange={(e) => setNo_telp(e.target.value)} />
+                                <div className="mb-3">
+                                    <label className="form-label" htmlFor="no_telp">No telpon</label>
+                                    <input type="text" className="form-control" id="no_telp" value={no_telp} onChange={(e) => setNo_telp(e.target.value)} />
                                 </div>
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <button type="submit" className="btn btn-primary">Simpan</button>
                             </form>
                         </div>
                     </div>

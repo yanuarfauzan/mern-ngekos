@@ -148,10 +148,10 @@ POST http://localhost:5000/kontrak
 Content-Type: application/json
 
 {
-    "kode": "kode1",
-    "tgl_mulai": "17/01/02",
-    "tgl_selesai": "12/01/02",
-    "tgl_bayar": "08/08/08",
+    "kode": "kode2",
+    "tgl_mulai": "08-01-02",
+    "tgl_selesai": "12-01-02",
+    "tgl_bayar": "08-08-08",
     "status": "lunas",
     "metode_bayar": "qris",
     "kamar_id": "6487380a604c04b4d817212d",

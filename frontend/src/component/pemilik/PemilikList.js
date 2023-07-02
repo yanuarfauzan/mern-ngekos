@@ -21,7 +21,7 @@ const PemilikList = () => {
   const deletePemilik = async (id) => {
     try {
       await axios.delete(`http://localhost:5000/pemilik/${id}`);
-      navigate("/kos")
+      navigate("/pemilik")
     } catch (err) {
       console.log(err.response.data);
     }

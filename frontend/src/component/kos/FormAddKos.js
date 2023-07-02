@@ -57,20 +57,20 @@ const FormAddKos = () => {
             <div>
               <h1>Form Tambah Kos</h1>
               <form onSubmit={saveKos}>
-                <div class="mb-3">
-                  <label for="nama" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="nama" value={nama} onChange={(e) => setNama(e.target.value)} />
-                </div>
-                <div class="mb-3">
-                  <label class="form-label" for="alamat">Alamat</label>
-                  <input type="text" class="form-control" id="alamat" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
-                </div>
-                <div class="mb-3">
-                  <label for="no_telp" class="form-label">No Telepon</label>
-                  <input type="text" class="form-control" id="no_telp" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} />
+                <div className="mb-3">
+                  <label htmlFor="nama" className="form-label">Nama</label>
+                  <input type="text" className="form-control" id="nama" value={nama} onChange={(e) => setNama(e.target.value)} />
                 </div>
                 <div className="mb-3">
-                  <label for="pemilik" class="form-label">Pemilik</label>
+                  <label className="form-label" htmlFor="alamat">Alamat</label>
+                  <input type="text" className="form-control" id="alamat" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="no_telp" className="form-label">No Telepon</label>
+                  <input type="text" className="form-control" id="no_telp" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="pemilik" className="form-label">Pemilik</label>
                   <select className="form-select" id="pemilik" onChange={(e) => setPemilik_id(e.target.value)} >
                     <option>pilih pemilik</option>
                     {pemilik.map((p, index) => (
@@ -79,7 +79,7 @@ const FormAddKos = () => {
                   </select>
                 </div>
                 <div className="mb-3">
-                  <label for="kamar" class="form-label">Kamar</label>
+                  <label htmlFor="kamar" className="form-label">Kamar</label>
                   <select className="form-select" id="kamar" onChange={(e) => setKamar_id(e.target.value)} >
                     <option>pilih kamar</option>
                     {kamar.map((k, index) => (

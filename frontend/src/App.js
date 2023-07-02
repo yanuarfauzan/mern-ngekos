@@ -13,6 +13,7 @@ import FormEditKamar from "./component/kamar/FormEditKamar.js";
 import PenyewaList from "./component/penyewa/PenyewaList.js";
 import FormAddPenyewa from "./component/penyewa/FormAddPenyewa.js";
 import FormEditPenyewa from "./component/penyewa/FormEditPenyewa.js";
+import KontrakList from "./component/kontrak/KontrakList.js";
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
           <Route path="/penyewa" element={<PenyewaList />} />
           <Route path="/addPenyewa" element={<FormAddPenyewa />} />
           <Route path="/editPenyewa/:id" element={<FormEditPenyewa />} />
-
+          {/* KONTRAK */}
+          <Route path="/kontrak" element={<KontrakList />} />
         </Routes>
       </div>
     </BrowserRouter>

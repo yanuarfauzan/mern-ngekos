@@ -6,15 +6,15 @@ const KontrakSchema = mongoose.Schema({
         required: true
     },
     tgl_mulai: {
-        type: String,
+        type: Date,
         required: true
     },
     tgl_selesai: {
-        type: String,
+        type: Date,
         required: true
     },
     tgl_bayar: {
-        type: String,
+        type: Date,
         required: true
     },
     status: {

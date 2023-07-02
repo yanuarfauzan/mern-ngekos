@@ -55,11 +55,11 @@ const KosList = () => {
                                             {k.pemilik_id.map((pmlk, index) => (
                                                 <td>{pmlk.nama}</td>
                                             ))}
-                                            <th>
+                                            <td>
                                                 <Link className="btn btn-info me-2 text-light" to={`/kamar/${k._id}`}>detail</Link>
                                                 <Link to={`/editKos/${k._id}`} className="btn btn-warning text-light">edit</Link>
                                                 <button className="btn btn-danger text-light ms-2" onClick={() => deleteKos(k._id)}>hapus</button>
-                                            </th>
+                                            </td>
                                         </tr>
                                     ))}
                                 </tbody>

@@ -1,6 +1,7 @@
 import Kontrak from '../models/Kontrak.js';
 import Kamar from '../models/Kamar.js';
 import Penyewa from '../models/Penyewa.js';
+import moment from 'moment';
 
 
 export const getKontrak = async (req, res) => {
@@ -35,9 +36,14 @@ export const saveKontrak = async (req, res) => {
             return res.status(404).json({ error: 'penyewa not found' });
         }
 
+        // format date
+
+        const tglMulai = new Date(tgl_mulai);
+        const formattedTglMulai = moment(tgl_mulai).format('DD/MM/YYYY');
+
         const kontrak = new Kontrak({
             kode,
-            tgl_mulai,
+            tgl_mulai: formattedTglMulai,
             tgl_selesai,
             tgl_bayar,
             status,
@@ -47,7 +53,13 @@ export const saveKontrak = async (req, res) => {
         })
 
         const savedKontrak = await kontrak.save();
-        res.status(201).json(savedKontrak);
+
+        // Mengubah objek Kontrak sebelum dikirim sebagai respons JSON
+        const responseKontrak = {
+            ...savedKontrak._doc,
+            tgl_mulai: formattedTglMulai // Menggunakan tanggal yang diformat
+        };
+        res.status(201).json(responseKontrak);
 
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -98,23 +110,8 @@ export const deleteKontrak = async (req, res) => {
             return res.status(404).json({ error: 'Kontrak not found' });
         }
 
-        const kamar_id = kontrak.kamar_id;
-        const penyewa_id = kontrak.penyewa_id;
-
-        await kontrak.deleteOne({ _id: id });
-
-        const kamar = await Kamar.findById(kamar_id);
-        const penyewa = await Penyewa.findById(penyewa_id);
-
-        if (kamar) {
-            kontrak.kamar.pull(id);
-            await kamar.save();
-        };
-
-        if (penyewa) {
-            kos.penyewa.pull(id);
-            await penyewa.save();
-        }
+        const deletedKontrak = await kontrak.deleteOne({ _id: id });
+        res.json(deletedKontrak);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }

@@ -44,19 +44,19 @@ const FormEditPemilik = () => {
                         <div>
                             <h1>Form Edit Pemilik</h1>
                             <form onSubmit={updatePemilik} >
-                                <div class="mb-3">
-                                    <label for="nama" class="form-label">Nama</label>
-                                    <input type="text" class="form-control" id="nama" value={nama} onChange={(e) => setNama(e.target.value)} />
+                                <div className="mb-3">
+                                    <label htmlFor="nama" className="form-label">Nama</label>
+                                    <input type="text" className="form-control" id="nama" value={nama} onChange={(e) => setNama(e.target.value)} />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <div className="mb-3">
+                                    <label htmlFor="email" className="form-label">Email</label>
+                                    <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="alamat">Alamat</label>
-                                    <input type="text" class="form-control" id="alamat" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
+                                <div className="mb-3">
+                                    <label className="form-label" htmlFor="alamat">Alamat</label>
+                                    <input type="text" className="form-control" id="alamat" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
                                 </div>
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <button type="submit" className="btn btn-primary">Simpan</button>
                             </form>
                         </div>
                     </div>
